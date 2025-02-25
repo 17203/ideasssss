@@ -13,7 +13,7 @@ export class OpenaiService {
     const url = 'https://api.openai.com/v1/chat/completions'
     try {
       const response = await axios.post(url, {
-        model: 'gpt-3.5-turbo',
+        model: 'gpt-4o-mini',
         messages: [
           { role: 'system', content: 'Eres un generador de ideas' },
           { role: 'user', content: prompt }
@@ -22,7 +22,7 @@ export class OpenaiService {
         temperature: 0.7,
       }, {
         headers: {
-          'Authorization': `Bearer $(this.apikey)`,
+          'Authorization': `Bearer ${this.apiKey}`,
           'Content-Type': 'application/json',
         }
       });

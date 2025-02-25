@@ -3,11 +3,12 @@ import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonItem, IonLab
 import { OpenaiService } from '../openai.service';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonItem, IonLabel, IonInput, IonCard, IonCardHeader, IonCardContent, IonCardTitle],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonItem, IonLabel, IonInput, IonCard, IonCardHeader, IonCardContent, IonCardTitle, FormsModule, CommonModule],
 })
 export class HomePage {
   constructor(private router: Router, private OpenaiService: OpenaiService) { }
