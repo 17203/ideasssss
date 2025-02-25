@@ -1,2 +1,22 @@
+<ion-content>
+    <ion-item>
+        <ion-label position="floating">Ingresa tu idea</ion-label>
+        <ion-input [(ngModel)]="ideaPrompt"
+            placeholder="Por ejemplo, 'Genera ideas para un juego tipo dark souls'"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" (click)="generateIdea()">Generar idea</ion-button>
+
+    <ion-card *ngIf="generatedIdea">
+        <ion-card-header>
+            <ion-card-title>Tu idea generada </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{generatedIdea}}
+        </ion-card-content>
+    </ion-card>
+</ion-content>
+
+
 <input type="text" placeholder="Ingrese pregunta">
 <button>Enviar pregunta</button>
