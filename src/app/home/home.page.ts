@@ -22,4 +22,7 @@ export class HomePage {
     }
     this.generatedIdea = await this.OpenaiService.generateIdea(this.ideaPrompt);
   }
+  onSignUp() {
+    this.router.navigateByUrl("login");
+  }
 }
