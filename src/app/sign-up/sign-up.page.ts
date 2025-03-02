@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { AuthService } from '../auth.service';
+import { IonHeader, IonToolbar, IonTitle, IonContent} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.page.html',
   styleUrls: ['./sign-up.page.css'],
+  imports: [CommonModule,FormsModule, IonHeader, IonToolbar, IonTitle, IonContent]
 })
 export class SignUpPage implements OnInit {
   email: string = '';

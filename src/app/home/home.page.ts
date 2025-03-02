@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonItem, IonLabel, IonInput, IonCard, IonCardHeader, IonCardContent, IonCardTitle } from '@ionic/angular/standalone';
+import {IonContent,IonInput, IonCard, IonCardHeader, IonCardContent, IonCardTitle,IonItem,IonLabel,IonButton } from '@ionic/angular/standalone';
 import { OpenaiService } from '../openai.service';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonButton, IonItem, IonLabel, IonInput, IonCard, IonCardHeader, IonCardContent, IonCardTitle, FormsModule, CommonModule],
+  imports: [IonContent,IonInput, IonCard, IonCardHeader, IonCardContent, IonCardTitle, FormsModule, CommonModule,IonItem,IonLabel,IonButton],
 })
 export class HomePage {
   constructor(private router: Router, private OpenaiService: OpenaiService) { }
