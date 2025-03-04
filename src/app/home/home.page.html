@@ -2,21 +2,22 @@
     <ion-item>
         <ion-label position="floating">Ingresa tu idea</ion-label>
         <ion-input [(ngModel)]="ideaPrompt"
-            placeholder="Por ejemplo, 'Genera ideas para un juego tipo dark souls'"></ion-input>
+            placeholder="Por ejemplo, 'Genera ideas para un juego tipo Dark Souls'"></ion-input>
     </ion-item>
 
     <ion-button expand="full" (click)="generateIdea()">Generar idea</ion-button>
 
     <ion-card *ngIf="generatedIdea">
         <ion-card-header>
-            <ion-card-title>Tu idea generada </ion-card-title>
+            <ion-card-title>Tu idea generada</ion-card-title>
         </ion-card-header>
         <ion-card-content>
             {{generatedIdea}}
         </ion-card-content>
     </ion-card>
-    <button (click)="onSignUp()"
-        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
-        Go to Login
-    </button>
+
+    <ion-button expand="full" (click)="onSignUp()">Go to Login</ion-button>
+
+    <!-- Botón de Logout -->
+    <ion-button expand="full" color="danger" (click)="logout()">Logout</ion-button>
 </ion-content>
